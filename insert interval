@@ -1,0 +1,10 @@
+arr=intervals
+        arr.append(newInterval)
+        arr=sorted(arr)
+        res=[]
+        for ele in arr:
+            if not res or res[-1][-1]<ele[0]:
+                res.append(ele)
+            else:
+                res[-1][-1]=max(res[-1][-1],ele[-1])
+        return res
